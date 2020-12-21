@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="compras.orden_list">
+            <field name="name">Orden </field>
+            <field name="model">compras.orden</field>
+            <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="apellido"/>
+            <field name="number"/>
+            <field name="date_orden"/>
+        </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="compras_action_window">
+            <field name="name">orden window </field>
+            <field name="res_model">compras.orden</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record model="ir.actions.server" id="compras.orden_action_server">
+      <field name="name">compras </field>
+      <field name="model_id" ref="model_compras_orden"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions_act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+
+
+    <menuitem name="Ordenn" id="compras.menu_7_list" parent="compras.menu_root"
+              action="compras.proveedores_action_window"/>
+
+
+    </data>
+</odoo>

@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_compras_proveedores,compras.proveedores,model_compras_proveedores,,1,1,1,1
 access_compras_productos,compras.productos,model_compras_productos,,1,1,1,1
 access_compras_tipoproductos,compras.tipoproductos,model_compras_tipoproductos,,1,1,1,1
+access_compras_orden,compras.orden, model_compras_orden,,1,1,1,1 
+

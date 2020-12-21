@@ -2,3 +2,4 @@
 
 from . import proveedores
 from . import productos
+from . import orden
