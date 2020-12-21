@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "inventario",
+    'name': "Inventario",
 
     'summary': """
-        plackets""",
+        Gestión de productos en almacén""",
 
     'description': """
         Proyecto web
