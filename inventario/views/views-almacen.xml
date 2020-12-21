@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+  
+    <record model="ir.ui.view" id="inventario.almacen_list">
+      <field name="name">Inventario</field>
+      <field name="model">inventario.almacen</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="cantidad"/>
+          <field name="porcentaje"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="inventario.almacen_action_window">
+      <field name="name">Inventario</field>
+      <field name="res_model">inventario.almacen</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+   
+
+    <menuitem name="Inventario" id="inventario.menu_root"/>
+    <menuitem name="Inventario" id="inventario.menu_almacen" parent="inventario.menu_root" action="inventario.almacen_action_window"/>
+
+  </data>
+</odoo>
