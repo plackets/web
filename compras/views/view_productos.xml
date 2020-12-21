@@ -8,6 +8,7 @@
                     <field name="name"/>
                     <field name="description"/>
                     <field name ="Tipo_producto_id"/>
+                    <field name ="price"/>
                   
                 </tree>
             </field>
