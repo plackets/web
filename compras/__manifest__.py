@@ -26,8 +26,8 @@
         'security/ir.model.access.csv',
         'views/view_proveedores.xml',
         'views/view_productos.xml',
-        'views/view_orden.xml'
-        'views/templates.xml',
+        'views/view_orden.xml',
+     #   'views/templates.xml',
       #  'views/report.xml',
     ],
     # only loaded in demonstration mode

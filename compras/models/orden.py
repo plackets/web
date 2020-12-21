@@ -1,12 +1,9 @@
-
-
 from odoo import models, fields, api
 
-class Orden (models.Model):
-
+class orden(models.Model):
     _name = 'compras.orden'
 
-    name = fields.Char (string= "Nombre", required =True)
-    apellido = fields.Char (string= "Apellido", required =True)
-    number = fields.Float (string = "Número", required = True)
-    date_orden = fields.Date ("Fecha")
+    name = fields.Char(string ="Razón Social")
+    number= fields.Char(string ="N° Orden de compra")
+    date = fields.Date("Fecha")
+

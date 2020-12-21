@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import proveedores
-from . import productos
-from . import orden
+from . import proveedores, productos, orden
+
