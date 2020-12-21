@@ -6,5 +6,6 @@ class compras(models.Model):
     name = fields.Char(string ="Razón Social")
     ubication= fields.Char(string ="Ubicación")
     description = fields.Text(string = "Descripción")
+ #     <!--     </t> -->
 
      
