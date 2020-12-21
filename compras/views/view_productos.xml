@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="compras.productos_list">
+            <field name="name">Agregar Productos</field>
+            <field name="model">compras.productos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name ="Tipo_producto_id"/>
+                  
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="compras.productos_action_window">
+            <field name="name">Agregar Productos</field>
+            <field name="res_model">compras.productos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.server" id="compras.productos_action_server">
+            <field name="name">compras </field>
+            <field name="model_id" ref="model_compras_productos"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions_act_window",
+                "view_mode": "tree,form",
+                "res_model": self._name,
+                }
+            </field>
+        </record>
+
+        <menuitem name="compras" id="compras.menu_root"/>
+        <menuitem name="PRODUCTOS" id="compras.menu_2_list" parent="compras.menu_root"
+              action="compras.productos_action_window"/>
+
+
+
+    </data>
+</odoo>
