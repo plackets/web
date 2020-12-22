@@ -4,6 +4,7 @@
       <field name="name">compras </field>
       <field name="model">compras.proveedores</field>
       <field name="arch" type="xml">
+     <!-- Kanban -->
         <tree>
           <field name="name"/>
           <field name="ubication"/>
