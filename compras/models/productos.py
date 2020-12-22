@@ -1,5 +1,10 @@
 from odoo import models, fields, api
 
+
+class Tipoproducto (models.Model):
+    _name = 'compras.tipoproductos'
+    name = fields.Char (string = "Nombre Producto", required = True)
+
 class producto (models.Model):
     _name = 'compras.productos'
 
@@ -9,9 +14,7 @@ class producto (models.Model):
   
     Tipo_producto_id = fields.Many2one ('compras.tipoproductos', string = "Tipo producto")
     
-class Tipoproducto (models.Model):
-    _name = 'compras.tipoproductos'
-    name = fields.Char (string = "Nombre Producto", required = True)
+
 
 
 

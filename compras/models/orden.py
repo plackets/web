@@ -7,3 +7,9 @@ class orden(models.Model):
     number= fields.Char(string ="N° Orden de compra")
     date = fields.Date("Fecha")
 
+class DetalleCompra(models.Model):
+    _name = 'compras.DetalleCompra'
+
+    nameprod = fields.Char(string ="Productos", required = True)
+    cantidad= fields.Integer(string ="Cantidad")
+    
