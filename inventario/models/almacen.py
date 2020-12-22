@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class almacenamiento(models.Model):
      _name = 'inventario.almacenamiento'
 
-     name = fields.Char(string = "Nombre", required = True)
+     name = fields.Char(string = "Estado", required = True)
      almacen_ids = fields.One2many(
           'inventario.almacen', #related model
           'almacenamiento_id', # field for "this" on related model
