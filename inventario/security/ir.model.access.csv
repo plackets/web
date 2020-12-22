@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_inventario_almacen,access_inventario.almacen,model_inventario_almacen,,1,1,1,1
+access_inventario_almacenamiento,access_inventario.almacenamiento,model_inventario_almacenamiento,,1,1,1,1
