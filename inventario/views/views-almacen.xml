@@ -1,6 +1,6 @@
 <odoo>
   <data>
-  
+    <!-- Listado inventario-->
     <record model="ir.ui.view" id="inventario.almacen_list">
       <field name="name">Inventario</field>
       <field name="model">inventario.almacen</field>
@@ -8,8 +8,35 @@
         <tree>
           <field name="nombre"/>
           <field name="cantidad"/>
+          <field name="fecha"/>
           <field name="porcentaje"/>
+          <field name="almacenamiento_id"/>
         </tree>
+      </field>
+    </record>
+
+    <!-- Formulario inventario-->
+
+
+
+    <record id="inventario.almacen_view" model="ir.ui.view">
+      <field name="name">Inventario</field>
+      <field name="model">inventario.almacen</field>
+      <field name="arch" type="xml">
+          <form string="Inventario">
+
+            <sheet>
+              <group>
+                  <field name="nombre" />
+                  <field name="cantidad" />
+              </group>
+              <group>
+                  <field name="fecha" />
+                  <field name="porcentaje" />
+                  <field name="almacenamiento_id" />
+              </group>
+            </sheet>
+          </form>
       </field>
     </record>
 
@@ -19,10 +46,28 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- Listado almacenamiento-->
+    <record model="ir.ui.view" id="inventario.almacenamiento_list">
+      <field name="name">Almacenamiento</field>
+      <field name="model">inventario.almacenamiento</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="total_estados"/>
+        </tree>
+      </field>
+    </record>    
+
+    <record model="ir.actions.act_window" id="inventario.almacenamiento_action_window">
+      <field name="name">Almacenamiento</field>
+      <field name="res_model">inventario.almacenamiento</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
    
 
     <menuitem name="Inventario" id="inventario.menu_root"/>
     <menuitem name="Inventario" id="inventario.menu_almacen" parent="inventario.menu_root" action="inventario.almacen_action_window"/>
-
+    <menuitem name="Almacenamiento" id="inventario.menu_almacenamiento" parent="inventario.menu_root" action="inventario.almacenamiento_action_window"/>
   </data>
 </odoo>
