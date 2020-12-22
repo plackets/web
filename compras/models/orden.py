@@ -3,13 +3,28 @@ from odoo import models, fields, api
 class orden(models.Model):
     _name = 'compras.orden'
 
-    name = fields.Char(string ="Razón Social", required = True)
     number= fields.Char(string ="N° Orden de compra")
     date = fields.Date("Fecha")
-
-class DetalleCompra(models.Model):
-    _name = 'compras.DetalleCompra'
-
-    nameprod = fields.Char(string ="Productos", required = True)
-    cantidad= fields.Integer(string ="Cantidad")
     
+    detalle_Orden_ids = fields.One2many(
+            'compras.detalle_orden', 'orden_id', string ="Detalle Orden"
+    )
+
+    nombreproveedor = fields.Many2one ('compras.proveedores', string = "Razón Social")
+
+
+class Detalle_orden (models.Model):
+    _name = 'compras.detalle_orden'
+    
+    nombreproducto = fields.Many2one ('compras.productos', string = "Productos")
+    cantidad = fields.Integer(default =1, string = "Cantidad")
+    precio = fields.Integer()
+    total = fields.Integer(string ="Total", compute = "_total_orden")
+    orden_id =fields.Many2one( 'compras.orden',string = "Orden")
+
+    @api.one
+    def _total_orden(self):
+        self.total = (self.cantidad * self.precio)
+   
+
+

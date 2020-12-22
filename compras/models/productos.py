@@ -7,7 +7,7 @@ class Tipoproducto (models.Model):
 
 class producto (models.Model):
     _name = 'compras.productos'
-
+    _rec_name = 'name'
     name = fields.Char (string = "Nombre Producto", required = True)
     description = fields.Char(string ="Descripcion", required = True)
     price = fields.Float(String = "Precio")
