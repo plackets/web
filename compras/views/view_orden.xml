@@ -63,8 +63,8 @@
                 }
             </field>
         </record>
-    <menuitem name="compras" id="compras.menu_root"/>
-    <menuitem name="orden" id="compras.orden" parent="compras.menu_root"
+    <menuitem name="Compras" id="compras.menu_root"/>
+    <menuitem name="ORDEN" id="compras.orden" parent="compras.menu_root"
               action="compras.orden_action_window"/>
 
   </data>

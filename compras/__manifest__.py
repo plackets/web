@@ -28,10 +28,11 @@
         'views/view_productos.xml',
         'views/view_orden.xml',
      #   'views/templates.xml',
-      #  'views/report.xml',
+     
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'application': True,
 }

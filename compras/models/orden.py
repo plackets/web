@@ -15,8 +15,8 @@ class orden(models.Model):
 
 class Detalle_orden (models.Model):
     _name = 'compras.detalle_orden'
-    
     nombreproducto = fields.Many2one ('compras.productos', string = "Productos")
+
     cantidad = fields.Integer(default =1, string = "Cantidad")
     precio = fields.Integer()
     total = fields.Integer(string ="Total", compute = "_total_orden")

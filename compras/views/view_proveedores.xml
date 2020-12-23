@@ -32,7 +32,7 @@
       </field>
     </record>
     
-    <menuitem name="compras" id="compras.menu_root"/>
+    <menuitem name="Compras" id="compras.menu_root"/>
     <menuitem name="PROVEEDORES" id="compras.menu_1_list" parent="compras.menu_root"
               action="compras.proveedores_action_window"/>
   
