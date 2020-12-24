@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ventas_ventas,ventas.ventas,model_ventas_ventas,,1,0,0,0
+access_ventas_ventas1,ventas.ventas1,model_ventas_ventas1,,1,1,1,1
+access_ventas_boleta,ventas.boleta,model_ventas_boleta,,1,1,1,1
+access_ventas_detalle_boleta,ventas.detalle_boleta,model_ventas_detalle_boleta,,1,1,1,1

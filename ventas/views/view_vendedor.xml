@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="ventas.ventas1_list">
+      <field name="name">Agregar Vendedor</field>
+      <field name="model">ventas.ventas1</field>
+      <field name="arch" type="xml">
+ 
+        <tree>
+          <field name="name"/>
+          <field name="rut"/>
+          <field name="edad"/>
+        </tree>
+      </field>
+    </record>
+
+      <record model="ir.actions.act_window" id="ventas.ventas1_action_window">
+      <field name="name">Agregar Vendedor</field>
+      <field name="res_model">ventas.ventas1</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    
+
+    <menuitem name="Ventas" id="ventas.menu_root"/>
+    <menuitem name="Vendedores" id="ventas.menu_1_list" parent="ventas.menu_root" action="ventas.ventas1_action_window"/>
+
+  </data>
+</odoo>

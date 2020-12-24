@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ventas",
+    'name': "Ventas",
 
     'summary': """
-        ventas de gustoso""",
+        Proceso de ventas""",
 
     'description': """
-        modulo que gestiona las ventas del restaurant gustoso
+        Modulo que gestiona las ventas del restaurant Gustoso
     """,
 
     'author': "hectorin19",
@@ -19,16 +19,13 @@
     'version': '0.1',
 
     # aquí se coloca de que modulo depende este 
-    'depends': ['base'], 
+    'depends': ['base','compras'], 
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv', que datos voy a ocupar
-        #'views/views.xml',
-        #'views/templates.xml',
+        'security/ir.model.access.csv',
+        'views/view_vendedor.xml',
+        'views/view_boleta.xml',
     ],
-    # only loaded in demonstration mode
-   # 'demo': [
-    #    'demo/demo.xml',
-    #],
+    'application': True,
 }

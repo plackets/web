@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="ventas.boleta_list">
+      <field name="name">Boleta </field>
+      <field name="model">ventas.boleta</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="number"/>
+          <field name="nombreproveedor"/>
+          <field name="date"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="ventas.detalle_boleta_list">
+            <field name="name"> Detalle</field>
+            <field name="model">ventas.detalle_boleta</field>
+            <field name="arch" type="xml">
+                <tree>
+                  
+                    <field name="cantidad"/>
+                    <field name="precio"/>
+                    <field name="total" sum = "total"/>
+               
+                  
+                </tree>
+            </field>
+        </record>
+
+    <record id="ventas.detalle_boleta_view" model="ir.ui.view" >
+            <field name="name">detalle</field>
+            <field name="model">ventas.detalle_boleta</field>
+            <field name="arch" type="xml">
+                <form  string = "Book">
+                    <sheet>
+                      <group>
+                        <separator string="Productos"/>
+                              <field name="nombreproducto"/>
+                              <field name="cantidad"/>
+                              <field name="precio"/>
+                              <field name="total"/>
+                      </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+     <record model="ir.actions.act_window" id="ventas.boleta_action_window">
+      <field name="name">Boleta</field>
+      <field name="res_model">ventas.boleta</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Ventas" id="ventas.menu_root"/>
+    <menuitem name="Boleta" id="ventas.boleta" parent="ventas.menu_root"
+              action="ventas.boleta_action_window"/>
+
+  </data>
+</odoo>
