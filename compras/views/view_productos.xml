@@ -20,12 +20,14 @@
             <field name="model">compras.productos</field>
             <field name="arch" type="xml">
                 <form  string = "Book">
-                    <group>
-                        <field name="name"/>
-                        <field name="description"/>
-                        <field name ="price"/>
-                        <field name ="Tipo_producto_id"/>
-                    </group>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name ="price"/>
+                            <field name ="Tipo_producto_id"/>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
@@ -51,7 +53,7 @@
             </field>
         </record>
 
-        <menuitem name="compras" id="compras.menu_root"/>
+        <menuitem name="Compras" id="compras.menu_root"/>
         <menuitem name="PRODUCTOS" id="compras.menu_2_list" parent="compras.menu_root"
               action="compras.productos_action_window"/>
 
